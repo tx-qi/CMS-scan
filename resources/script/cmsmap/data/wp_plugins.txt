@@ -1,0 +1,9 @@
+$plugin
+0-errors
+001-prime-strategy-translate-accelerator
+002-ps-custom-post-type
+011-ps-custom-taxonomy
+012-ps-multi-languages
+028-ps-combine-taxonomy-children
+030-ps-display-upload-path-for-wp35
+03talk-community-conference

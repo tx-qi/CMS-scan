@@ -1,0 +1,95 @@
+cmsmap.py https://www.apu.edu.my/ -F -o apu.edu.my.txt
+[-] Date & Time: 06/06/2021 16:41:58
+[-] ExploitDB and CMSmap plugins are not updated to the latest version
+[-] Would you like to update it?
+[I] Threads: 5
+[-] Target: https://www.apu.edu.my (13.228.52.225)
+[I] Server: Apache
+[L] X-Generator: Drupal 7 (http://drupal.org)
+[L] X-Frame-Options: Not Enforced
+[I] Strict-Transport-Security: Not Enforced
+[I] X-Content-Security-Policy: Not Enforced
+[L] Robots.txt Found: https://www.apu.edu.my/robots.txt
+[I] CMS Detection: Drupal
+[I] Drupal Version: 7.59
+[M]  EDB-ID: 46510 "Drupal < 8.5.11 / < 8.6.10 - RESTful Web Services unserialize() Remote Command Execution (Metasploit)"
+[M]  EDB-ID: 44448 "Drupal < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution (PoC)"
+[M]  EDB-ID: 44449 "Drupal < 7.58 / < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution"
+[M]  EDB-ID: 44482 "Drupal < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution (Metasploit)"
+[I] Drupal Theme: APU
+[-] Enumerating Drupal Usernames via "Views" Module...
+[-] Enumerating Drupal Usernames via "/user/"...
+[I] Autocomplete Off Not Found: https://www.apu.edu.my/user/
+[-] Drupal Default Files: 
+[-] Drupal is likely to have a large number of default files
+[-] Would you like to list them all?
+[I] https://www.apu.edu.my/robots.txt
+[I] https://www.apu.edu.my/sites/README.txt
+[I] https://www.apu.edu.my/themes/README.txt
+[I] https://www.apu.edu.my/profiles/README.txt
+[I] https://www.apu.edu.my/modules/README.txt
+[-] Checking interesting directories/files ... 
+[L] https://www.apu.edu.my/.default.txt
+[L] https://www.apu.edu.my/.bash_profile.txt
+[L] https://www.apu.edu.my/.logs.txt
+[L] https://www.apu.edu.my/.db_config.txt
+[L] https://www.apu.edu.my/.bashrc.txt
+[L] https://www.apu.edu.my/.old.txt
+[L] https://www.apu.edu.my/.secret.txt
+[L] https://www.apu.edu.my/.queries.txt
+[L] https://www.apu.edu.my/.private.txt
+[L] https://www.apu.edu.my/.temp.txt
+[L] https://www.apu.edu.my/.temp2.txt
+[L] https://www.apu.edu.my/.sql.txt
+[L] https://www.apu.edu.my/.query.txt
+[L] https://www.apu.edu.my/.db_config.php
+[L] https://www.apu.edu.my/.logs.php
+[L] https://www.apu.edu.my/.bashrc.php
+[L] https://www.apu.edu.my/.bash_profile.php
+[L] https://www.apu.edu.my/.default.php
+[L] https://www.apu.edu.my/.old.php
+[L] https://www.apu.edu.my/.queries.php
+[L] https://www.apu.edu.my/.query.php
+[L] https://www.apu.edu.my/.private.php
+[L] https://www.apu.edu.my/.secret.php
+[L] https://www.apu.edu.my/.sql.php
+[L] https://www.apu.edu.my/.temp2.php
+[L] https://www.apu.edu.my/.temp.php
+[L] https://www.apu.edu.my/install.php
+[L] https://www.apu.edu.my/.bash_profile/
+[L] https://www.apu.edu.my/.bashrc/
+[L] https://www.apu.edu.my/.db_config/
+[L] https://www.apu.edu.my/.default/
+[L] https://www.apu.edu.my/.logs/
+[L] https://www.apu.edu.my/.query/
+[L] https://www.apu.edu.my/.old/
+[L] https://www.apu.edu.my/.queries/
+[L] https://www.apu.edu.my/.private/
+[L] https://www.apu.edu.my/.secret/
+[L] https://www.apu.edu.my/.temp2/
+[L] https://www.apu.edu.my/.sql/
+[L] https://www.apu.edu.my/.temp/
+[L] https://www.apu.edu.my/0/
+[L] https://www.apu.edu.my/Temp/
+[L] https://www.apu.edu.my/Test/
+[L] https://www.apu.edu.my/sitemap/
+[L] https://www.apu.edu.my/temp/
+[L] https://www.apu.edu.my/test/
+[L] https://www.apu.edu.my/.bash_profile.html
+[L] https://www.apu.edu.my/.db_config.html
+[L] https://www.apu.edu.my/.bashrc.html
+[L] https://www.apu.edu.my/.default.html
+[L] https://www.apu.edu.my/.logs.html
+[L] https://www.apu.edu.my/.private.html
+[L] https://www.apu.edu.my/.query.html
+[L] https://www.apu.edu.my/.queries.html
+[L] https://www.apu.edu.my/.old.html
+[L] https://www.apu.edu.my/.secret.html
+[L] https://www.apu.edu.my/.sql.html
+[L] https://www.apu.edu.my/.temp2.html
+[L] https://www.apu.edu.my/.temp.html
+[I] Forgotten Password Allows Username Enumeration: https://www.apu.edu.my/user/password
+Forgotten Password Allows Username Enumeration: https://www.apu.edu.my/user/password
+[-] Search Drupal Modules ...
+[ERROR] Interrupt caught. CMSmap paused. Do you really want to exit?
+[-] Bye! Quitting.. 

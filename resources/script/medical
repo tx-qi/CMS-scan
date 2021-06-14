@@ -1,0 +1,38 @@
+cmsmap.py https://www.apu.edu.my/ -o medical
+[-] Date & Time: 14/06/2021 11:49:12
+[-] ExploitDB and CMSmap plugins are not updated to the latest version
+[-] Would you like to update it?
+[I] Threads: 5
+[-] Target: https://www.apu.edu.my (13.228.52.225)
+[I] Server: Apache
+[L] X-Generator: Drupal 7 (http://drupal.org)
+[L] X-Frame-Options: Not Enforced
+[I] Strict-Transport-Security: Not Enforced
+[I] X-Content-Security-Policy: Not Enforced
+[L] Robots.txt Found: https://www.apu.edu.my/robots.txt
+[I] CMS Detection: Drupal
+[I] Drupal Version: 7.59
+[M]  EDB-ID: 46510 "Drupal < 8.5.11 / < 8.6.10 - RESTful Web Services unserialize() Remote Command Execution (Metasploit)"
+[M]  EDB-ID: 44448 "Drupal < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution (PoC)"
+[M]  EDB-ID: 44449 "Drupal < 7.58 / < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution"
+[M]  EDB-ID: 44482 "Drupal < 8.3.9 / < 8.4.6 / < 8.5.1 - 'Drupalgeddon2' Remote Code Execution (Metasploit)"
+[I] Drupal Theme: APU
+[-] Enumerating Drupal Usernames via "Views" Module...
+[-] Enumerating Drupal Usernames via "/user/"...
+[I] Autocomplete Off Not Found: https://www.apu.edu.my/user/
+[-] Drupal Default Files: 
+[-] Drupal is likely to have a large number of default files
+[-] Would you like to list them all?
+[I] Forgotten Password Allows Username Enumeration: https://www.apu.edu.my/user/password
+Forgotten Password Allows Username Enumeration: https://www.apu.edu.my/user/password
+[-] Search Drupal Modules ...
+[I] colorbox
+[I] content
+[I] ctools
+[I] jcarousel
+[I] views_slideshow
+[I] Checking for Directory Listing Enabled ...
+Checking for Directory Listing Enabled ...
+[-] Date & Time: 14/06/2021 11:55:50
+[-] Completed in: 0:06:37
+[-] Output File Saved in: medical

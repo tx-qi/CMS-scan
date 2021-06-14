@@ -1,0 +1,11 @@
+cmsmap.py https://goals.usim.edu.my/moodle/index.php -o goals.usim.edu.my.txt
+[-] Date & Time: 06/06/2021 17:35:32
+[-] ExploitDB and CMSmap plugins are not updated to the latest version
+[-] Would you like to update it?
+[I] Threads: 5
+[-] Target: https://goals.usim.edu.my/moodle/index.php (103.18.93.157)
+[ERROR] Unable to scan: https://goals.usim.edu.my/moodle/index.php
+[ERROR] [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1123)
+[-] Date & Time: 06/06/2021 17:35:49
+[-] Completed in: 0:00:16
+[-] Output File Saved in: goals.usim.edu.my.txt
