@@ -2,7 +2,8 @@ import json
 import re
 import os
 
-fff = open("apu.edu.my.txt", "r")
+print(os.getcwd())
+fff = open("aput.txt", "r")
 countLow = 0
 countMed = 0
 countHigh = 0
@@ -45,9 +46,10 @@ url = re.compile(r"https?://(www\.)?")
 
 filenames = url.sub('', filename).strip().strip('/')
 filenames = filenames + ".json"
-filepath = '..\scanJSON'
+filepath = '../scanJSON'
 completeName=os.path.join(filepath, filenames)
 
+# fff = open(completeName,"w+")
 fff = open(completeName,"w+")
 fff.write(jsondata)
 fff.close()

@@ -12,6 +12,8 @@ from .lib.genericchecks import genericchecker
 from .lib.report import report
 from .lib.coreupdate import updater
 from .lib.postexploit import postexploiter
+import re
+import json
 
 
 def main():
@@ -51,14 +53,14 @@ def main():
             argsscan.add_argument("-E", "--noedb",help="enumerate plugins without searching exploits",action="store_true", default=False)
             argsscan.add_argument("-c", "--nocleanurls",help="disable clean urls for Drupal only",action="store_true", default=False)
             argsscan.add_argument("-s", "--nosslcheck",help="don't validate the server's certificate",action="store_true", default=False)
-            argsscan.add_argument("-d","--dictattack",help="run low intense dictionary attack during scanning (5 attempts per user)", 
+            argsscan.add_argument("-d","--dictattack",help="run low intense dictionary attack during scanning (5 attempts per user)",
                 action="store_true",default=False)
             # Brute-Force Arguments
             argsbrute.add_argument("-u", "--usr", help="username or username file", metavar="")
             argsbrute.add_argument("-p", "--psw", help="password or password file", metavar="")
             argsbrute.add_argument("-x", "--noxmlrpc", help="brute forcing WordPress without XML-RPC", action="store_false", default=True)
             # Post Exploitation Arguments
-            argspostexp.add_argument("-k", "--crack", 
+            argspostexp.add_argument("-k", "--crack",
                 help="password hashes file (Require hashcat installed. For WordPress and Joomla only)", metavar="")
             argspostexp.add_argument("-w", "--wordlist", help="wordlist file", metavar="")
             # Others Arguments
@@ -105,8 +107,8 @@ def main():
     msg = "Date & Time: " + time.strftime('%d/%m/%Y %H:%M:%S')
     report.status(msg)
 
-    updater.UpdateExploitDB()
-    updater.CheckLocalFiles()
+    # updater.UpdateExploitDB()
+    # updater.CheckLocalFiles()
 
     if initializer.forceCMSmapUpdate:
         updater.forceCMSmapUpdate()
@@ -192,3 +194,57 @@ def main():
     if initializer.output:
         msg = "Output File Saved in: " + report.fn
         report.status(msg)
+
+        fff = report.log
+        countLow = 0
+        countMed = 0
+        countHigh = 0
+        countTotal = 0
+        lowVuln = []
+        medVuln = []
+        highVuln = []
+        cmsInfo = []
+
+        textArray = fff.split("\n")
+        c=textArray
+
+
+        for i in c:
+            line = i[3::].strip()
+
+            if i[1] == "L":
+                lowVuln.append(line)
+                countLow += 1
+
+            elif i[1] == "M":
+                medVuln.append(line)
+                countMed += 1
+
+            elif i[1] == "H":
+                highVuln.append(line)
+                countHigh += 1
+
+            elif i[1] == "I":
+                cmsInfo.append(line)
+
+        countTotal= countLow + countMed + countHigh
+
+        data = {'data': [{'Low-vulnerability': lowVuln, 'Medium-vulnerability': medVuln, 'High-vulnerability': highVuln, 'Cms-info': cmsInfo, 'countLow': countLow, 'countMed': countMed, 'countHigh': countHigh, 'countTotal': countTotal}]}
+        jsondata = json.dumps(data, indent=4)
+
+        fName = c[0]
+        a = fName.split()
+
+        filename = a[1]
+        url = re.compile(r"https?://(www\.)?")
+
+        filenames = url.sub('', filename).strip().strip('/')
+        filenames = filenames + ".json"
+        filepath = '../scanJSON'
+        completeName=os.path.join(filepath, filenames)
+
+        # fff = open(completeName,"w+")
+        fff = open(completeName,"w+")
+        fff.write(jsondata)
+        fff.close()
+
