@@ -103,27 +103,27 @@ class DruScan:
     # Find default Drupal files (large number, prompt the user if display them all)
     def DruDefaultFiles(self):
         msg = "Checking Drupal default files"
-        report.verbose(msg)
-        self.defFilesFound = []
-        msg = "Drupal Default Files: "
-        report.message(msg)
-        msg = "Drupal is likely to have a large number of default files"
-        report.message(msg)
-        msg = "Would you like to list them all?"
-        report.message(msg)
-        if not initializer.default:
-            if input("[y/N]: ").lower().startswith('y'):
-                # Check for default files
-                for r, file in enumerate(self.defaultFiles):
-                    requester.request(self.url + file, data=None)
-                    sys.stdout.write("\r" + str(int(100 * int(r + 1) / len(self.defaultFiles))) + "%")
-                    sys.stdout.flush()
-                    if requester.status_code == 200 and len(requester.htmltext) not in self.notValidLen:
-                        self.defFilesFound.append(self.url + file)
-                sys.stdout.write("\r")
-                for file in self.defFilesFound:
-                    msg = file
-                    report.info(msg)
+        # report.verbose(msg)
+        # self.defFilesFound = []
+        # msg = "Drupal Default Files: "
+        # report.message(msg)
+        # msg = "Drupal is likely to have a large number of default files"
+        # report.message(msg)
+        # msg = "Would you like to list them all?"
+        # report.message(msg)
+        if  initializer.default:
+            # if input("[y/N]: ").lower().startswith('y'):
+            # Check for default files
+            for r, file in enumerate(self.defaultFiles):
+                requester.request(self.url + file, data=None)
+                sys.stdout.write("\r" + str(int(100 * int(r + 1) / len(self.defaultFiles))) + "%")
+                sys.stdout.flush()
+                if requester.status_code == 200 and len(requester.htmltext) not in self.notValidLen:
+                    self.defFilesFound.append(self.url + file)
+            sys.stdout.write("\r")
+            for file in self.defFilesFound:
+                msg = file
+                report.info(msg)
 
     # Find Drupal users via the View Module
     def DruViews(self):
@@ -133,7 +133,7 @@ class DruScan:
         self.alphanum = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
         msg = "Enumerating Drupal Usernames via \"Views\" Module..."
         report.message(msg)
-        requester.noredirect(self.url + "/?q=admin/views/ajax/autocomplete/user/NotExisingUser1234!", data=None) 
+        requester.noredirect(self.url + "/?q=admin/views/ajax/autocomplete/user/NotExisingUser1234!", data=None)
         #If NotExisingUser1234 returns [], then enumerate users
         if requester.htmltext == '[]':
             msg = "\"Views\" Module vulnerable to user enumeration"
@@ -154,7 +154,7 @@ class DruScan:
         if not initializer.disableCleanURLs :
             self.blog = self.blog.replace("?q=","")
         requester.request(self.url + self.blog, data=None)
-        if requester.status_code == 200: 
+        if requester.status_code == 200:
             msg = "Enumerating Drupal Usernames via \"Blog\" Module..."
             report.message(msg)
             for blognum in range(1, 50):
@@ -228,7 +228,7 @@ class DruScan:
         for pluginFound in self.pluginsFound:
             self.pluginsFoundVers[pluginFound] = None
         self.pluginsFound = self.pluginsFoundVers
-    
+
     # Find modules via dictionary attack
     def DruModules(self):
         msg = "Search Drupal Modules ..."

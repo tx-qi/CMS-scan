@@ -10,14 +10,27 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
+                <!-- Navigation Links -->z
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @if(Auth::user()->hasRole('admin'))
+                    <x-nav-link :href="route('scanHistory_admin')" :active="request()->routeIs('scanHistory_admin')">
+                        {{ __('Scan History') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('userList_admin')" :active="request()->routeIs('userList_admin')">
+                        {{ __('User List') }}
+                    </x-nav-link>
+                    @endif
+
+                    @if(Auth::user()->hasRole('user'))
                     <x-nav-link :href="route('scanHistory')" :active="request()->routeIs('scanHistory')">
                         {{ __('Scan History') }}
                     </x-nav-link>
+                    @endif
                 </div>
             </div>
 

@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "Low-vulnerability": [],
+            "Medium-vulnerability": [],
+            "High-vulnerability": [],
+            "Cms-info": [
+                "Threads: 5",
+                "Server: nginx",
+                "X-Content-Security-Policy: Not Enforced",
+                "CMS Detection: Moodle",
+                "Checking for Directory Listing Enabled ...",
+                "] Unable to scan: https://www.qa.com",
+                "] [Errno -3] Temporary failure in name resolution"
+            ],
+            "countLow": 0,
+            "countMed": 0,
+            "countHigh": 0,
+            "countTotal": 0
+        }
+    ]
+}

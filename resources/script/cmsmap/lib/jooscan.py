@@ -114,27 +114,27 @@ class JooScan:
     # Find default Joomla files (large number, prompt the user if display them all)
     def JooDefaultFiles(self):
         self.defFilesFound = []
-        msg = "Checking Joomla default files ..."
-        report.verbose(msg)
-        msg = "Joomla Default Files: "
-        report.message(msg)
-        msg = "Joomla is likely to have a large number of default files"
-        report.message(msg)
-        msg = "Would you like to list them all?"
-        report.message(msg)
-        if not initializer.default:
-            if input("[y/N]: ").lower().startswith('y'):
-                # Check for default files
-                for r, file in enumerate(self.defaultFiles):
-                    requester.request(self.url + file, data=None)
-                    sys.stdout.write("\r" + str(int(100 * int(r + 1) / len(self.defaultFiles))) + "%")
-                    sys.stdout.flush()
-                    if requester.status_code == 200 and len(requester.htmltext) not in self.notValidLen:
-                        self.defFilesFound.append(self.url + file)
-                sys.stdout.write("\r")
-                for file in self.defFilesFound:
-                    msg = file
-                    report.info(msg)
+        # msg = "Checking Joomla default files ..."
+        # report.verbose(msg)
+        # msg = "Joomla Default Files: "
+        # report.message(msg)
+        # msg = "Joomla is likely to have a large number of default files"
+        # report.message(msg)
+        # msg = "Would you like to list them all?"
+        # report.message(msg)
+        if  initializer.default:
+            # if input("[y/N]: ").lower().startswith('y'):
+            # Check for default files
+            for r, file in enumerate(self.defaultFiles):
+                requester.request(self.url + file, data=None)
+                sys.stdout.write("\r" + str(int(100 * int(r + 1) / len(self.defaultFiles))) + "%")
+                sys.stdout.flush()
+                if requester.status_code == 200 and len(requester.htmltext) not in self.notValidLen:
+                    self.defFilesFound.append(self.url + file)
+            sys.stdout.write("\r")
+            for file in self.defFilesFound:
+                msg = file
+                report.info(msg)
 
     # Find Joomla users via Feed (Feed is available only in old versions of Joomla)
     def JooFeed(self):

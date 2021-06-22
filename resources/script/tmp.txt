@@ -1,0 +1,87 @@
+cmsmap.py https://fst.usim.edu.my/ -o tmp.txt
+[-] Date & Time: 22/06/2021 21:20:32
+[I] Threads: 5
+[-] Target: https://fst.usim.edu.my (103.18.93.54)
+[I] Server: Apache
+[L] X-Frame-Options: Not Enforced
+[I] Strict-Transport-Security: Not Enforced
+[I] X-Content-Security-Policy: Not Enforced
+[I] X-Content-Type-Options: Not Enforced
+[L] Robots.txt Found: https://fst.usim.edu.my/robots.txt
+[I] CMS Detection: WordPress
+[I] Wordpress Version: 4.9.17
+[I] Wordpress Theme: Avada
+[M]  EDB-ID: 34511 "Mulitple WordPress Themes - 'admin-ajax.php?img' Arbitrary File Download"
+[-] WordPress usernames identified: 
+[M] Ahmad Farid
+[M] ahmadfarid
+[M] sdecadmin
+[M] webmaster
+[M] XML-RPC services are enabled
+[M] Website vulnerable to XML-RPC Brute Force Vulnerability
+[I] Forgotten Password Allows Username Enumeration: https://fst.usim.edu.my/wp-login.php?action=lostpassword
+[I] Autocomplete Off Not Found: https://fst.usim.edu.my/wp-login.php
+[-] Default WordPress Files:
+[I] https://fst.usim.edu.my/license.txt
+[I] https://fst.usim.edu.my/readme.html
+[I] https://fst.usim.edu.my/wp-content/themes/twentyfifteen/genericons/COPYING.txt
+[I] https://fst.usim.edu.my/wp-content/themes/twentyfifteen/genericons/LICENSE.txt
+[I] https://fst.usim.edu.my/wp-content/themes/twentyfifteen/readme.txt
+[I] https://fst.usim.edu.my/wp-content/themes/twentysixteen/genericons/COPYING.txt
+[I] https://fst.usim.edu.my/wp-content/themes/twentysixteen/genericons/LICENSE.txt
+[I] https://fst.usim.edu.my/wp-content/themes/twentysixteen/readme.txt
+[I] https://fst.usim.edu.my/wp-includes/ID3/license.commercial.txt
+[I] https://fst.usim.edu.my/wp-includes/ID3/license.txt
+[I] https://fst.usim.edu.my/wp-includes/ID3/readme.txt
+[I] https://fst.usim.edu.my/wp-includes/images/crystal/license.txt
+[I] https://fst.usim.edu.my/wp-includes/js/plupload/license.txt
+[I] https://fst.usim.edu.my/wp-includes/js/swfupload/license.txt
+[I] https://fst.usim.edu.my/wp-includes/js/tinymce/license.txt
+[-] Searching Wordpress Plugins ...
+[I] .
+[M]  EDB-ID: 37753 "WordPress Plugin Simple Image Manipulator 1.0 - Arbitrary File Download"
+[I] contact-form-7 v5.0.2
+[M]  EDB-ID: 48062 "WordPress Plugin contact-form-7 5.1.6 - Remote File Upload"
+[I] course-catalog-system-2.4.7
+[I] events-calendar-pro v4.4.22
+[I] feed
+[M]  EDB-ID: 38624 "WordPress Plugin WP Feed - 'nid' SQL Injection"
+[I] fusion-builder
+[I] fusion-core
+[I] revslider
+[I] sitepress-multilingual-cms
+[I] the-events-calendar v4.6.19
+[I] Checking for Directory Listing Enabled ...
+Checking for Directory Listing Enabled ...
+[L] https://fst.usim.edu.my/wp-admin/css
+[L] https://fst.usim.edu.my/wp-admin/images
+[L] https://fst.usim.edu.my/wp-admin/includes
+[L] https://fst.usim.edu.my/wp-admin/js
+[L] https://fst.usim.edu.my/wp-admin/maint
+[L] https://fst.usim.edu.my/wp-includes
+[L] https://fst.usim.edu.my/wp-includes/ID3
+[L] https://fst.usim.edu.my/wp-includes/IXR
+[L] https://fst.usim.edu.my/wp-includes/Requests
+[L] https://fst.usim.edu.my/wp-includes/SimplePie
+[L] https://fst.usim.edu.my/wp-includes/Text
+[L] https://fst.usim.edu.my/wp-includes/certificates
+[L] https://fst.usim.edu.my/wp-includes/css
+[L] https://fst.usim.edu.my/wp-includes/customize
+[L] https://fst.usim.edu.my/wp-includes/fonts
+[L] https://fst.usim.edu.my/wp-includes/images
+[L] https://fst.usim.edu.my/wp-includes/js
+[L] https://fst.usim.edu.my/wp-includes/pomo
+[L] https://fst.usim.edu.my/wp-includes/random_compat
+[L] https://fst.usim.edu.my/wp-includes/rest-api
+[L] https://fst.usim.edu.my/wp-includes/theme-compat
+[L] https://fst.usim.edu.my/wp-includes/widgets
+[L] https://fst.usim.edu.my/wp-content/plugins/contact-form-7
+[L] https://fst.usim.edu.my/wp-content/plugins/course-catalog-system-2.4.7
+[L] https://fst.usim.edu.my/wp-content/plugins/events-calendar-pro
+[L] https://fst.usim.edu.my/wp-content/plugins/fusion-builder
+[L] https://fst.usim.edu.my/wp-content/plugins/fusion-core
+[L] https://fst.usim.edu.my/wp-content/plugins/sitepress-multilingual-cms
+[L] https://fst.usim.edu.my/wp-content/plugins/the-events-calendar
+[-] Date & Time: 22/06/2021 21:25:24
+[-] Completed in: 0:04:52
+[-] Output File Saved in: tmp.txt

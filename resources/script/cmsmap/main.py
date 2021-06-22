@@ -227,6 +227,18 @@ def main():
             elif i[1] == "I":
                 cmsInfo.append(line)
 
+            elif i[1]== "E":
+                countLow = 0
+                countMed = 0
+                countHigh = 0
+                countTotal = 0
+                lowVuln = []
+                medVuln = []
+                highVuln = []
+                lines = line[3::].strip()
+                cmsInfo.append(lines)
+
+
         countTotal= countLow + countMed + countHigh
 
         data = {'data': [{'Low-vulnerability': lowVuln, 'Medium-vulnerability': medVuln, 'High-vulnerability': highVuln, 'Cms-info': cmsInfo, 'countLow': countLow, 'countMed': countMed, 'countHigh': countHigh, 'countTotal': countTotal}]}

@@ -1,0 +1,30 @@
+{
+    "data": [
+        {
+            "Low-vulnerability": [
+                "X-Generator: Drupal 7 (http://drupal.org)",
+                "X-Frame-Options: Not Enforced",
+                "Robots.txt Found: https://thehill.com/robots.txt"
+            ],
+            "Medium-vulnerability": [],
+            "High-vulnerability": [],
+            "Cms-info": [
+                "Threads: 5",
+                "Server: nginx",
+                "X-Powered-By: PHP/7.4.19",
+                "X-Content-Security-Policy: Not Enforced",
+                "CMS Detection: Drupal",
+                "Drupal Version: 7.80",
+                "Drupal Theme: thehill",
+                "Autocomplete Off Not Found: https://thehill.com/user/",
+                "content",
+                "thehill",
+                "Checking for Directory Listing Enabled ..."
+            ],
+            "countLow": 3,
+            "countMed": 0,
+            "countHigh": 0,
+            "countTotal": 3
+        }
+    ]
+}

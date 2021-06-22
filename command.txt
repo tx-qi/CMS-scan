@@ -1,0 +1,2 @@
+sudo python3 cmsmap.py https://fst.usim.edu.my/ -o tmp.txt
+sudo python3 cmsmap.py https://www.qa.com/ -o qa.com.txt -f M -v
