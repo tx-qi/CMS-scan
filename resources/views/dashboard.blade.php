@@ -16,21 +16,21 @@
     </div>
      <div>
         <div class="wrap">
-            <div class="search" style="text-align: center">
+            <div style="text-align: center">
                <input type="text" class="searchTerm" placeholder="Please enter website"> <br>
-               <input type="radio" id="Scan" name="fullScan" value="fullScan">
+               <input type="radio" id="Scan" name="Scan" value="fullScan">
                 <label for="fullScan">Full Scan</label>
-                <input type="radio" id="Scan" name="defaultScan" value="defaultScan">
-                <label for="defaultScan"> Default Scan</label>
+                <input type="radio" id="Scan" name="Scan" value="defaultScan">
+                <label for="defaultScan"> Default Scan  </label>
                 <label for="typeOfCMS">| Type of CMD:</label>
                 <input list="typeOfCMS" name="typeOfCMS" id="typeOfCMS">
-                <datalist id="typeOfCMS">
-                  <option value="Auto">
-                  <option value="Wordpress">
-                  <option value="Drupal">
-                  <option value="Joomla">
-                  <option value="Moodle">
-                </datalist>
+                <select id="typeOfCMS">
+                    <option value="Auto">Auto</option>
+                    <option value="Wordpress">Wordpress</option>
+                    <option value="Drupal">Drupal</option>
+                    <option value="Joomla">Joomla</option>
+                    <option value="Moodle">Moodle</option>
+                  </select>
                <button type="submit" class="searchButton">
                  <i class="fa fa-search"></i>
               </button>

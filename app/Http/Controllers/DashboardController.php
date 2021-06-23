@@ -12,7 +12,7 @@ class DashboardController extends Controller
             return view('dashboard');
         }
         elseif(Auth::user()->hasRole('admin')){
-            return view('dashboard_admin');
+            return view('dashboard_admin'); /* ->with('jsAlert', $message); */
         }
 
         return view('dashboard');
@@ -24,8 +24,19 @@ class DashboardController extends Controller
 
     }
 
-    public function userList_admin(){
-        return view('userList_admin');
 
+
+    public function store()
+    {
+        /* var_dump(request('Scan'));
+        var_dump(request('typeofCMS'));
+        var_dump(request('websiteName')); */
+        // request('Scan')->$Scan;
+        // $request->request->add(['img' => $img]);
+
+
+        // ddd('runScript');
+        // dd();
     }
+
 }

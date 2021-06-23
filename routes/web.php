@@ -26,6 +26,7 @@ Route::get('/scanHistory', function () {
 
 })->middleware(['auth'])->name('scanHistory');
 
+Route::post('/runScript', 'App\Http\Controllers\DashboardController@store');
 
 /* Route::get('/scanHistory_admin', function () {
     return view('scanHistory_admin');
@@ -40,7 +41,9 @@ Route::get('/userList_admin', function () {
 Route::group(['middleware' => ['auth', 'role:admin']], function() {
 
     Route::get('scanHistory_admin', 'App\Http\Controllers\DashboardController@scanHistory_admin')->name('scanHistory_admin');
-    Route::get('userList_admin', 'App\Http\Controllers\DashboardController@userList_admin')->name('userList_admin');
+    Route::get('userList_admin', 'App\Http\Controllers\userList_controller@userList_admin')->name('userList_admin');
 });
+
+
 
 require __DIR__.'/auth.php';
