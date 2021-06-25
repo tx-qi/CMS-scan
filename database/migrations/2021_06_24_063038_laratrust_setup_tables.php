@@ -20,8 +20,6 @@ class LaratrustSetupTables extends Migration
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
             $table->timestamps();
-
-
         });
 
         // Create table for storing permissions

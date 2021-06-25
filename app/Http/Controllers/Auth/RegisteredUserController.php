@@ -57,6 +57,7 @@ class RegisteredUserController extends Controller
         // }
 
         // return redirect(RouteServiceProvider::HOME);
+        $adminRole = Role::where('name', 'admin')->first();
 
         $request->validate([
             'name' => 'required|string|max:255',

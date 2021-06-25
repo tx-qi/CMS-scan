@@ -37,9 +37,9 @@
                                             <td>{{ $user->email }}</td>
                                             <td>{{$user->created_at}}</td>
                                             <td>
-                                                @can('elevate-users')
+                                               {{--  @if(Auth::user($user)->hasRole('admin'))
                                                     <a href="{{ route('admin.users.edit', $user->id) }}"><button type="button" class="btn btn-primary float-left">Edit</button></a>
-                                                @endcan
+                                                @endif --}}
                                                 @can('delete-users')
                                                     <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" class="float-left">
                                                         @csrf

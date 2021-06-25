@@ -22,9 +22,11 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Route::get('/scanHistory', function () {
-    return view('scanHistory');
+    return view('scanHistory.index');
 
 })->middleware(['auth'])->name('scanHistory');
+
+Route::get('/scanHistory/result', 'App\Http\Controllers\scanHistory_controller@show')->name('scanHistory');
 
 Route::post('/runScript', 'App\Http\Controllers\DashboardController@store');
 

@@ -3,30 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\Http\Controllers\User;
-use Illuminate\Foundation\Auth\User;
-use Illuminate\Support\Facades\Auth;
 
-
-class userList_controller extends Controller
+class scanHistory_controller extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function userList_admin(){
-
-        $users = User::all();
-        return view('userList_admin', compact('users'));
-        // return view('userList_admin');
-
-    }
     public function index()
     {
-        $users = User::all();
-        return view('userList_admin', compact('users'));
+        //
     }
 
     /**
@@ -46,12 +33,8 @@ class userList_controller extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   /* $users = User::all();
-        $user=User::create($request->only(['id','name','email']));
-        $user->roles->sync($request->roles);
-        ddd($user);
-
-        return redirect(route('userList_admin'))   ; */
+    {
+        //
     }
 
     /**
@@ -60,9 +43,19 @@ class userList_controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show()
+    {   $filename='qa.com.json' ;
+        // style windows
+        $path =" ". base_path() . "\\resources\scanJSON\\$filename";
+
+        // $path = base_path() . "/resources/scanJSON/$filename.json";
+
+        $data = json_decode(file_get_contents($path), true);
+        $data='';
+        // dd($json);
+
+
+        return view('scanHistory.scanResult',$data);
     }
 
     /**

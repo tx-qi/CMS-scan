@@ -28,15 +28,23 @@ class DashboardController extends Controller
 
     public function store()
     {
-        /* var_dump(request('Scan'));
-        var_dump(request('typeofCMS'));
-        var_dump(request('websiteName')); */
-        // request('Scan')->$Scan;
-        // $request->request->add(['img' => $img]);
+
+        $website=request('websiteName');
+        $initial='sudo python3 cmsmap.py';
+        $end='-o tmp.txt';
+        $scan=request('Scan');
+        $typeofCMS=request('typeofCMS');
+        $Compiled=$initial." ".$website." ".$scan." ".$typeofCMS." ".$end;
+        print_r($Compiled. "  ");
+
+        $path = base_path() . "\\resources\script\\dummy.py";
+        print_r($path);
+        $run=passthru('C:/Users/TAQI/AppData/Local/Programs/Python/Python39/python.exe ' . $path.' ');
+        var_dump($run);
 
 
-        // ddd('runScript');
-        // dd();
+
+        // return redirect();
     }
 
 }
