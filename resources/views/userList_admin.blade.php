@@ -24,7 +24,7 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">Roles</th>
+                                        <th scope="col">Created at</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                     </thead>
@@ -37,16 +37,19 @@
                                             <td>{{ $user->email }}</td>
                                             <td>{{$user->created_at}}</td>
                                             <td>
-                                               {{--  @if(Auth::user($user)->hasRole('admin'))
-                                                    <a href="{{ route('admin.users.edit', $user->id) }}"><button type="button" class="btn btn-primary float-left">Edit</button></a>
-                                                @endif --}}
-                                                @can('delete-users')
-                                                    <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" class="float-left">
-                                                        @csrf
-                                                        {{ method_field('DELETE') }}
-                                                        <button type="submit" class="btn btn-warning">Delete</button>
-                                                    </form>
-                                                @endcan
+                                                <th>
+                                                <form method="post" action="/escalate" id="userAction" name="userAction" enctype="multipart/form-data">
+                                                    {{ csrf_field() }}
+                                                    {{-- <input type="hidden" value="" name="fileName"> --}}
+                                                    <input type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" value="Admin escalate">
+                                                </form>
+                                                </th>
+                                                <th><form method="post" action="/delete" id="userAction" name="userAction" enctype="multipart/form-data">
+                                                    {{ csrf_field() }}
+                                                    {{-- <input type="hidden" value="" name="fileName"> --}}
+                                                    <input type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" value="Delete User">
+                                                </form>
+                                                </th>
                                             </td>
                                         </tr>
                                     @endforeach

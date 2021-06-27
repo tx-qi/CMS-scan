@@ -1,23 +1,22 @@
 {
-    "data": [
-        {
-            "Low-vulnerability": [
-                "X-Frame-Options: Not Enforced",
-                "No Robots.txt Found"
-            ],
-            "Medium-vulnerability": [],
-            "High-vulnerability": [],
-            "Cms-info": [
-                "Threads: 5",
-                "Server: nginx",
-                "X-Content-Security-Policy: Not Enforced",
-                "CMS Detection: Moodle",
-                "Checking for Directory Listing Enabled ..."
-            ],
-            "countLow": 2,
-            "countMed": 0,
-            "countHigh": 0,
-            "countTotal": 2
-        }
-    ]
+    "data": [{
+
+        "Low-vulnerability": [
+            "X-Frame-Options: Not Enforced",
+            "No Robots.txt Found"
+        ],
+        "Medium-vulnerability": [],
+        "High-vulnerability": [],
+        "Cms-info": [
+            "Threads: 5",
+            "Server: nginx",
+            "X-Content-Security-Policy: Not Enforced",
+            "CMS Detection: Moodle",
+            "Checking for Directory Listing Enabled ..."
+        ],
+        "countLow": 2,
+        "countMed": 0,
+        "countHigh": 0,
+        "countTotal": 2
+    }]
 }

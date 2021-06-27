@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class scanHistory_controller extends Controller
 {
@@ -43,19 +44,38 @@ class scanHistory_controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
-    {   $filename='qa.com.json' ;
+    public function result(Request $request)
+    {   //$filename=$file;
+        //dd($request);
+        $filename=$request->fileName;
+
         // style windows
-        $path =" ". base_path() . "\\resources\scanJSON\\$filename";
+        $path =base_path() . "\\resources\scanJSON\\$filename";
 
         // $path = base_path() . "/resources/scanJSON/$filename.json";
 
-        $data = json_decode(file_get_contents($path), true);
-        $data='';
-        // dd($json);
+        // $data = (array)json_decode(file_get_contents($path), true);
+        $data = (array)json_decode(file_get_contents($path), true);
+        $array=$data['data'];
+        // $data='';
+        //dd(($array));
 
 
-        return view('scanHistory.scanResult',$data);
+        return view('scanHistory.scanResult',compact('data'));
+    }
+
+
+    public function delete(Request $request)
+    {
+        $filename=$request->fileName;
+
+        // style windows
+        $path =base_path() . "\\resources\scanJSON\\$filename";
+        File::delete($path);
+
+
+
+        return redirect()->to('/scanHistory');
     }
 
     /**
@@ -90,5 +110,15 @@ class scanHistory_controller extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function scanHistory(){
+        $path=base_path() . "\\resources\scanJSON\\";
+        // $files = scandir($path);
+        $files = array_diff(scandir($path), array('.', '..'));
+        // dd($files);
+
+        return view('scanHistory.index',compact('files'));
+
     }
 }

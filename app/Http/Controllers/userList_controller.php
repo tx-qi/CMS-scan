@@ -13,7 +13,7 @@ class userList_controller extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
 
     public function userList_admin(){
@@ -25,8 +25,6 @@ class userList_controller extends Controller
     }
     public function index()
     {
-        $users = User::all();
-        return view('userList_admin', compact('users'));
     }
 
     /**
@@ -94,8 +92,14 @@ class userList_controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+        return redirect()->route('userList_admin');
+    }
+
+    public function escalate(Request $request)
+    {
+
+        return redirect()->route('userList_admin');
     }
 }

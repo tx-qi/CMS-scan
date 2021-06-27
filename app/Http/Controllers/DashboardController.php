@@ -26,7 +26,7 @@ class DashboardController extends Controller
 
 
 
-    public function store()
+    public function runScript()
     {
 
         $website=request('websiteName');

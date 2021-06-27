@@ -21,14 +21,14 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
 });
 
-Route::get('/scanHistory', function () {
-    return view('scanHistory.index');
+Route::get('/scanHistory/', 'App\Http\Controllers\scanHistory_controller@scanHistory')->name('scanHistory');
+Route::post('/scanHistory/result', 'App\Http\Controllers\scanHistory_controller@result')->name('/scanHistory/scanResult');
+Route::post('/scanHistory/delete', 'App\Http\Controllers\scanHistory_controller@delete')->name('/scanHistory/delete');
 
-})->middleware(['auth'])->name('scanHistory');
+Route::post('/runScript', 'App\Http\Controllers\DashboardController@runScript');
 
-Route::get('/scanHistory/result', 'App\Http\Controllers\scanHistory_controller@show')->name('scanHistory');
-
-Route::post('/runScript', 'App\Http\Controllers\DashboardController@store');
+Route::post('/delete', 'App\Http\Controllers\userList_controller@delete')->name('/delete');
+Route::post('/escalate', 'App\Http\Controllers\userList_controller@escalate')->name('/escalate');
 
 /* Route::get('/scanHistory_admin', function () {
     return view('scanHistory_admin');

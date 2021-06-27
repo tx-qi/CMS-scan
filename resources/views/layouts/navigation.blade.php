@@ -18,7 +18,7 @@
                     </x-nav-link>
 
                     @if(Auth::user()->hasRole('admin'))
-                    <x-nav-link :href="route('scanHistory_admin')" :active="request()->routeIs('scanHistory_admin')">
+                    <x-nav-link :href="route('scanHistory')" :active="request()->routeIs('scanHistory')">
                         {{ __('Scan History') }}
                     </x-nav-link>
                     <x-nav-link :href="route('userList_admin')" :active="request()->routeIs('userList_admin')">
@@ -26,11 +26,7 @@
                     </x-nav-link>
                     @endif
 
-                    @if(Auth::user()->hasRole('user'))
-                    <x-nav-link :href="route('scanHistory')" :active="request()->routeIs('scanHistory')">
-                        {{ __('Scan History') }}
-                    </x-nav-link>
-                    @endif
+
                 </div>
             </div>
 
